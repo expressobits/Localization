@@ -1,2 +1,2 @@
-# WSLocalization-Tool-for-Unity
-World Simple Localization Tool for Unity
+# Sentence Translator Tool for Unity
+Sentence Translator Tool for Unity
