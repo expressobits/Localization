@@ -36,6 +36,11 @@ namespace ExpressoBits.Localization
             languageListeners.Add(languageListener);
         }
 
+        public void RemoveListener(IChangeLanguage languageListener)
+        {
+            languageListeners.Remove(languageListener);
+        }
+
 
     }
 }

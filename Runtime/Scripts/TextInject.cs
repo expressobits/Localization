@@ -16,10 +16,18 @@ namespace ExpressoBits.Localization
             GetComponent<Text>().text = sentence.ToString();
         }
 
+        private void Awake() {
+            LocalizationManager.instance.AddListener(this);
+        }
+
         // Start is called before the first frame update
         void Start()
         {
             ChangeLanguage();
+        }
+
+        private void OnDestroy() {
+            LocalizationManager.instance.RemoveListener(this);
         }
     }
 }
