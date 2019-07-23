@@ -3,25 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(TextInject))]
-public class TextInject : MonoBehaviour
+namespace ExpressoBits.Localization
 {
-
-    public Sentence sentence;
-
-    private void Awake() {
-        GetComponent<Text>().text = sentence.ToString();
-    }
-
-    // Start is called before the first frame update
-    void Start()
+    [RequireComponent(typeof(TextInject))]
+    public class TextInject : MonoBehaviour
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public Sentence sentence;
+
+        private void Awake()
+        {
+            GetComponent<Text>().text = sentence.ToString();
+        }
+
+        // Start is called before the first frame update
+        void Start()
+        {
+
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
     }
 }
+
+

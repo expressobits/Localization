@@ -1,12 +1,42 @@
 using UnityEngine;
+using System.Collections.Generic;
+using System.Collections;
 
-[CreateAssetMenu(fileName = "Sentence", menuName = "Sentence TTU/Sentence", order = 0)]
-public class Sentence : ScriptableObject {
+namespace ExpressoBits.Localization
+{
+    [CreateAssetMenu(fileName = "Sentence", menuName = "Expresso Bits/Localization/Sentence", order = 1)]
+    public class Sentence : ScriptableObject
+    {
 
-    public string key;
-    public string content;
+        public List<SentenceTranslated> texts;
 
-    public override string ToString(){
-        return content;
+        public override string ToString()
+        {
+            return GetText();
+        }
+
+        public string GetText(Language language){
+            for (int i = 0; i < texts.Count; i++)
+            {
+                if(texts[i].language == language){
+                    return texts[i].content;
+                }
+            }
+            return "Default text";
+        }
+
+        public string GetText(){
+            Language language = LocalizationManager.instance.language;
+            for (int i = 0; i < texts.Count; i++)
+            {
+                if(texts[i].language == language){
+                    return texts[i].content;
+                }
+            }
+            return "Default text";
+        }
+
     }
+
 }
+
