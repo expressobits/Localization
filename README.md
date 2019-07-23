@@ -11,7 +11,7 @@
 ## Install
 
 To install, you must open in the folders of your ***Packages/manifest.json*** files add the package 
-> "br.com.expressobits.uppeplus": "https://github.com/ExpressoBits/Localization.git"
+> "br.com.expressobits.localization": "https://github.com/ExpressoBits/Localization.git"
 
 and you're done!
 
