@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1ffe99096e24fe49ab1cd8dc4affbf8, type: 3}
   m_Name: Example
   m_EditorClassIdentifier: 
-  key: example
-  content: 
+  texts:
+  - language: {fileID: 11400000, guid: c941fc249c52b7648a835458e648a8bb, type: 2}
+    content: Exemplo
+  - language: {fileID: 11400000, guid: 202daed1b6763df419084f1dbd0e5a79, type: 2}
+    content: Example!

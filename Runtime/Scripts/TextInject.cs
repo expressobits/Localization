@@ -6,12 +6,12 @@ using UnityEngine.UI;
 namespace ExpressoBits.Localization
 {
     [RequireComponent(typeof(TextInject))]
-    public class TextInject : MonoBehaviour
+    public class TextInject : MonoBehaviour,IChangeLanguage
     {
 
         public Sentence sentence;
 
-        private void Awake()
+        public void ChangeLanguage()
         {
             GetComponent<Text>().text = sentence.ToString();
         }
@@ -19,13 +19,7 @@ namespace ExpressoBits.Localization
         // Start is called before the first frame update
         void Start()
         {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            ChangeLanguage();
         }
     }
 }

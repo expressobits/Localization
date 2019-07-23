@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections.Generic;
+using System.Collections;
 
 namespace ExpressoBits.Localization
 {
@@ -9,7 +11,7 @@ namespace ExpressoBits.Localization
 
         public Language language;
 
-        //private List<LanguageListener> languageListeners = new List<LanguageListener>();
+        private List<IChangeLanguage> languageListeners = new List<IChangeLanguage>();
 
         private void Awake()
         {
@@ -23,16 +25,16 @@ namespace ExpressoBits.Localization
         public void SetLanguage(Language language)
         {
             this.language = language;
-            // for (int i = 0; i < languageListeners.Count; i++)
-            // {
-            //     //languageListeners[i].OnLanguageChange();
-            // }
+            for (int i = 0; i < languageListeners.Count; i++)
+            {
+                languageListeners[i].ChangeLanguage();
+            }
         }
 
-        // public void AddListener(LanguageListener languageListener)
-        // {
-        //     //languageListeners.Add(languageListener);
-        // }
+        public void AddListener(IChangeLanguage languageListener)
+        {
+            languageListeners.Add(languageListener);
+        }
 
 
     }

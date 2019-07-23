@@ -27,6 +27,7 @@ namespace ExpressoBits.Localization
 
         public string GetText(){
             Language language = LocalizationManager.instance.language;
+            if(language == null) Debug.LogError("No have localization manager in scene! Add new localization manager in main scene");
             for (int i = 0; i < texts.Count; i++)
             {
                 if(texts[i].language == language){
