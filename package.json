@@ -1,8 +1,8 @@
 {
     "name": "br.com.expressobits.localization",
     "displayName": "Localization",
-    "version": "0.1.21",
-    "unity": "2016.4",
+    "version": "0.1.3",
+    "unity": "2019.1",
     "description": "Add tools to localization sentences in Unity",
     "keywords": [
         "localization",
